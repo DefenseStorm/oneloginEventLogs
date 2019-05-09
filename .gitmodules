@@ -1,3 +1,6 @@
 [submodule "ds-integration"]
 	path = ds-integration
 	url = https://github.com/DefenseStorm/ds-integration.git
+[submodule "onelogin-python-sdk"]
+	path = onelogin-python-sdk
+	url = https://github.com/onelogin/onelogin-python-sdk.git
