@@ -88,8 +88,7 @@ class integration(object):
 
         self.ds.log('INFO', 'Retrieving logs from %s until %s' %(last_run_str,current_run_str))
 
-        #self.onelogin = OneLoginClient(client_id=self.ds.config_get('onelogin', 'client_id'), client_secret = self.ds.config_get('onelogin', 'client_secret') ,region=self.ds.config_get('onelogin', 'region'))
-        self.onelogin = OneLoginClient(client_id = self.ds.config_get('onelogin', 'client_id'), client_secret = self.ds.config_get('onelogin', 'client_secret'))
+        self.onelogin = OneLoginClient(client_id = self.ds.config_get('onelogin', 'client_id'), client_secret = self.ds.config_get('onelogin', 'client_secret'), max_results = self.ds.config_get('onelogin', 'max_results'))
 
         self.onelogin.requests_timeout = 10
 
