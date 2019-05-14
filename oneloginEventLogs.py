@@ -17,6 +17,10 @@ from DefenseStorm import DefenseStorm
 
 class integration(object):
 
+    JSON_field_mappings = {
+        'onelogin_app_name' : 'category'
+    }
+
     def writeOneLoginEvent(self, event):
         this_event = {}
         this_event['id'] = event.id
@@ -61,7 +65,7 @@ class integration(object):
         this_event['message'] = self.event_types[this_event['event_type_id']]['description']
         this_event['event_type'] = self.event_types[this_event['event_type_id']]['name']
 
-        self.ds.writeJSONEvent(this_event)
+        self.ds.writeJSONEvent(this_event, JSON_field_mappings = self.JSON_field_mappings)
 
         return
 
