@@ -60,7 +60,6 @@ class integration(object):
         this_event['browser_fingerprint'] = event.browser_fingerprint
 
         this_event['timestamp'] = this_event['created_at']
-        this_event['ol_timestamp'] = this_event['created_at']
 
         this_event['message'] = self.event_types[this_event['event_type_id']]['description']
         this_event['event_type'] = self.event_types[this_event['event_type_id']]['name']
